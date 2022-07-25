@@ -11,7 +11,7 @@ if not _G.InGTA then
 	end
 	local maidenURL = "https://raw.githubusercontent.com/Ozzy-P/Washiez/main/Unstable/Main_v4.lua"
 	local maidlessURL = "https://raw.githubusercontent.com/Ozzy-P/Washiez/main/Unstable/Main_v4.lua"
-	time = math.clamp(time,5,120)
+	time = math.clamp(time,5,109)
 	-- Gui to Lua
 	-- Version: 3.2
 
@@ -538,7 +538,7 @@ if not _G.InGTA then
 				UDim2.new(0.12, 0, 0.12, 0),  -- endSize (required)
 				Enum.EasingDirection.Out,    -- easingDirection (default Out)
 				Enum.EasingStyle.Linear,      -- easingStyle (default Quad)
-				6,                          -- time (default: 1)
+				7.5,                          -- time (default: 1)
 				true,                       -- should this tween override ones in-progress? (default: false)
 				nil                    -- a function to call when the tween completes (default: nil)
 			)
