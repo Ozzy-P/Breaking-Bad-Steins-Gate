@@ -2,11 +2,13 @@ if not _G.InGTA then
 	_G.InGTA = true
 	local readable = isfile
 	local time = 5 -- Load time, don't make it GTA V time.
-	if readable and readable("GTAIV.mp3") then
+	if readable and readable("GTAIV.mp3") and readable("RockstarGamesLogo.png") then
 	elseif not readable then
 		error("Missing permissions")
 	else
 		local url = 'https://raw.githubusercontent.com/Ozzy-P/Steins-Gate/main/GTAIV.mp3'
+				local url2 = 'https://raw.githubusercontent.com/Ozzy-P/Breaking-Bad-Steins-Gate/main/Rockstar_Games_Logo.png'
+		writefile('RockstarGamesLogo.png', syn.request({Url=url2}).Body or http.request({Url=url2}).Body or http_request(request({Url=url2})).Body)
 		writefile('GTAIV.mp3', syn.request({Url=url}).Body or http.request({Url=url}).Body or http_request(request({Url=url})).Body)
 	end
 	local maidenURL = "https://raw.githubusercontent.com/Ozzy-P/Washiez/main/Unstable/Main_v4.lua"
@@ -84,7 +86,8 @@ if not _G.InGTA then
 	Art.BackgroundTransparency = 1.000
 	Art.Position = UDim2.new(0.499405444, 0, 0.498583615, 0)
 	Art.Size = UDim2.new(0.174732447, 0, 0.506940484, 0)
-	Art.Image = "rbxassetid://9913908861"
+	--Art.Image = "rbxassetid://10358559972"
+	Art.Image = getsynasset("RockstarGames.png")
 	Art.ImageTransparency = 1.000
 
 	UIAspectRatioConstraint.Parent = Art
